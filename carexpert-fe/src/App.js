@@ -2,7 +2,7 @@ import React from 'react';
 
 import './App.css';
 
-import Navbar from './component/Navbar/Navbar';
+import Navbarcon from './component/Navbar/Navbarcon';
 import { Outlet } from "react-router-dom";
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
 
-      <Navbar/>
+      <Navbarcon/>
       <Outlet/>
       
       
