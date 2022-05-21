@@ -1,13 +1,24 @@
 import React, { Component } from "react";
-import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
+import {
+  Navbar,
+  Container,
+  Nav,
+  NavDropdown,
+  Button,
+  OverlayTrigger,
+  Tooltip,
+} from "react-bootstrap";
 import LogOut from "../LogOut";
-import {NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+
+
 
 class Navbarcon extends Component {
   render() {
     return (
       <>
-        <Navbar bg="light" expand="lg" sticky="top" >
+        <Navbar bg="light" expand="lg" sticky="top">
           <Container>
             <Navbar.Brand href="/">
               <bold>CareXpert</bold>
@@ -17,10 +28,13 @@ class Navbarcon extends Component {
               id="basic-navbar-nav"
               className="justify-content-end"
             >
-              <Nav className="justify-content-end" variant = "tabs">
-              
-                <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-                <Nav.Link as={NavLink} to="/HospitalReg">Register Hospital</Nav.Link>
+              <Nav className="justify-content-end" variant="tabs">
+                <Nav.Link as={NavLink} to="/">
+                  Home
+                </Nav.Link>
+                <Nav.Link as={NavLink} to="/HospitalReg">
+                  Register Hospital
+                </Nav.Link>
                 <NavDropdown title="Logins" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/HospitalLogin">
                     Hospital
@@ -32,17 +46,47 @@ class Navbarcon extends Component {
                     Patient
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/DoctorReg">
-                    Register Doctor
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="/PatientReg">
+                  <OverlayTrigger
+                    placement="bottom"
+                    overlay={
+                      <Tooltip>
+                        you should logged in as <strong>Hospital</strong>.
+                      </Tooltip>
+                    }
+                  >
+                    <NavDropdown.Item href="/Home/Hos/DoctorReg">
+                      Register Doctor
+                    </NavDropdown.Item>
+                  </OverlayTrigger>
+                  <OverlayTrigger
+placement="bottom"
+overlay={
+  <Tooltip>
+    you should logged in as <strong>Hospital</strong>.
+  </Tooltip>
+}
+>
+<NavDropdown.Item href="/Home/Hos/PatientReg">
                     Register Patient
                   </NavDropdown.Item>
+</OverlayTrigger>
+
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-            <Nav.Link href="/"><Button variant="outline-danger">Alert</Button></Nav.Link>
-            <LogOut/>
+            <OverlayTrigger
+placement="bottom"
+overlay={
+  <Tooltip>
+    you should be <strong>logged in</strong>.
+  </Tooltip>
+}
+>
+<Nav.Link href="/Home">
+              <Button variant="outline-danger">Alert</Button>
+            </Nav.Link>
+</OverlayTrigger>
+            <LogOut />
           </Container>
         </Navbar>
       </>

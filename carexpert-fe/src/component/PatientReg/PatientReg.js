@@ -50,7 +50,7 @@ class PatientReg extends Component {
             doctor_id: this.state.doctor_id,
         }
         console.log(sessionStorage.getItem('usertoken'))
-        axios.post('http://localhost:3001/Hospital/register_patient',newUser ,{headers: {
+        axios.post('https://limitless-refuge-36101.herokuapp.com/Hospital/register_patient',newUser ,{headers: {
           'authorization': sessionStorage.getItem('usertoken')
         }})
           .then(responce => {

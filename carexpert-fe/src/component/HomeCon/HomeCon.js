@@ -15,9 +15,9 @@ class HomeCon extends Component {
       <Navbar bg="light" expand="lg" style = {{position:'sticky',top:62}}>
       <Container>
       <Nav defaultActiveKey="/Home/Hos/PatientReg" as="ul" variant="tabs">
-      <Nav.Item as="li">
+      {false && (<Nav.Item as="li">
         <Nav.Link as={NavLink} to="/Home/Hos/Profile">Profile</Nav.Link>
-      </Nav.Item>
+      </Nav.Item>)}
       <Nav.Item as="li">
         <Nav.Link as={NavLink} to="/Home/Hos/Patients">Patients</Nav.Link>
       </Nav.Item>
@@ -42,9 +42,9 @@ class HomeCon extends Component {
       <Navbar bg="light" expand="lg" style = {{position:'sticky',top:62}}>
       <Container>
         <Nav defaultActiveKey="/Home/Doc/Patients" as="ul" variant="tabs" sticky="top">
-        <Nav.Item as="li">
+        {false && (<Nav.Item as="li">
           <Nav.Link as={NavLink} to="/Home/Doc/Profile">Profile</Nav.Link>
-        </Nav.Item>
+        </Nav.Item>)}
         <Nav.Item as="li">
           <Nav.Link as={NavLink} to="/Home/Doc/Patients">Patients</Nav.Link>
         </Nav.Item>
@@ -57,9 +57,9 @@ class HomeCon extends Component {
     return(<>
       <Navbar bg="light" expand="lg" style = {{position:'sticky',top:62}}>
       <Container>
-      <Nav defaultActiveKey="/Home/Pat/Profile" as="ul" variant="tabs" >
+      <Nav defaultActiveKey="/Home/Pat/Profile/default" as="ul" variant="tabs" >
       <Nav.Item as="li">
-        <Nav.Link as={NavLink} to="/Home/Pat/Profile">Profile</Nav.Link>
+        <Nav.Link as={NavLink} to="/Home/Pat/Profile/default">Profile</Nav.Link>
       </Nav.Item>
     </Nav>
     </Container>

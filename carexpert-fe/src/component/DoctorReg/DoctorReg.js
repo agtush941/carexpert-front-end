@@ -44,7 +44,7 @@ class DoctorReg extends Component {
             specialist: this.state.specialist,
         }
         console.log(sessionStorage.getItem('usertoken'))
-        axios.post('http://localhost:3001/Hospital/register_doctor',newUser ,{headers: {
+        axios.post('https://limitless-refuge-36101.herokuapp.com/Hospital/register_doctor',newUser ,{headers: {
           'authorization': sessionStorage.getItem('usertoken')
         }})
           .then(responce => {

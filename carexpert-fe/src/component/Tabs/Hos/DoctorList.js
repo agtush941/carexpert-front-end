@@ -12,7 +12,7 @@ class DoctorList extends Component {
       }
 
       componentDidMount(){
-        axios.get('http://localhost:3001/Hospital/Doctors',{
+        axios.get('https://limitless-refuge-36101.herokuapp.com/Hospital/Doctors',{
             headers: {
               authorization: sessionStorage.getItem('usertoken')
             }

@@ -41,7 +41,7 @@ class HospitalReg extends Component {
             headsemail: this.state.headsemail,
         }
     
-        axios.post('http://localhost:3001/Hospital/register', newUser)
+        axios.post('https://limitless-refuge-36101.herokuapp.com/Hospital/register', newUser)
           .then(responce => {
             console.log(responce.data);
             return responce.data;
@@ -65,7 +65,7 @@ class HospitalReg extends Component {
           <div className="container my-5">
             <div className="row">
               <div className="col-md-6 mt-5 mx-auto">
-                <form noValidate onSubmit={this.onSubmit} >
+                <form Validate onSubmit={this.onSubmit} >
                   <h1 className="h3 mb-3 font-weight-normal btn-rg">Register Hospital</h1>
                   <div className="form-group">
                     <label htmlFor="name">name</label>
@@ -76,6 +76,7 @@ class HospitalReg extends Component {
                       placeholder="Enter your name"
                       value={this.state.name}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -87,6 +88,7 @@ class HospitalReg extends Component {
                       placeholder="Enter city"
                       value={this.state.city}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -98,6 +100,7 @@ class HospitalReg extends Component {
                       placeholder="Enter state"
                       value={this.state.state}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -109,6 +112,7 @@ class HospitalReg extends Component {
                       placeholder="Enter address"
                       value={this.state.address}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -120,6 +124,7 @@ class HospitalReg extends Component {
                       placeholder="Enter email"
                       value={this.state.email}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -131,6 +136,7 @@ class HospitalReg extends Component {
                       placeholder="Password"
                       value={this.state.password}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -142,6 +148,7 @@ class HospitalReg extends Component {
                       placeholder="Enter your Phone Number"
                       value={this.state.contact}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -153,6 +160,7 @@ class HospitalReg extends Component {
                       placeholder="Enter your name"
                       value={this.state.headsname}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <div className="form-group">
@@ -164,6 +172,7 @@ class HospitalReg extends Component {
                       placeholder="Enter email"
                       value={this.state.headsemail}
                       onChange={this.onChange}
+                      required
                     />
                   </div>
                   <button
