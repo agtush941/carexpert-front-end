@@ -1,11 +1,13 @@
 # carexpert
 ## A Digital Health-Care Platform to Coordinate treatment during critical ICU scenarios. careXpert has innovative
-interfaces to manage Hospitals across Management, Doctors, and Patients.
+## interfaces to manage Hospitals across Management, Doctors, and Patients.
 ## Facilitates digital health records management using AWS, provides unique ”Alert concerned doctors, hospital”
 ## facility on Patient emergency, patient follow-up reminders for doctors, view patients records, add notes, etc.
+
+**[careXpert](https://carexpert-tushar-ag.herokuapp.com/)
 # Getting Started with Create React App
 
-[careXpert](https://carexpert-tushar-ag.herokuapp.com/)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
